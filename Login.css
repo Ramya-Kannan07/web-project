@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(52, 104, 214) ;
+    padding:30px;
+}
+.Container h1{
+    padding-bottom: 8px;
+}
+/*Header*/
+/*header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    z-index:10;
+    background: transparent;
+}
+header .logo i{
+    position: relative;
+    font-size: 1.5em;
+    color: blue;
+    text-decoration: none;
+    font-weight: 600;
+}
+header .navbar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+header .navbar a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+header .navbar a:hover{
+    color: blue ;
+}
+header .search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+header .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border:1px solid #fff;
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+}
+header .search input::placeholder{
+    color: #fff;
+}
+header .search .searchbar{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:10px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding-right:10px;
+}*/
+.Container{
+    top:40px;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective:2700px;
+}
+.Container .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index:98;
+    transition: all 1s ease;
+   transform-origin: left;
+   transform-style: preserve-3d;
+}
+.Container .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:rgb(52, 104, 214);
+    opacity: 0.5;
+   z-index: 100;
+}
+.Container #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+}
+.Container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 12;
+}
+.Container form{
+height: 100%;
+width: 100%;
+background: #fff;
+}
+.Container .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .Signup-form{
+    width: calc(100% / 2 -25px);
+    /*background: blue;*/
+}
+form .form-content .title{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+form .form-content .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: rgb(52, 104, 214);
+}
+form .Signup-form .title::before{
+    width: 20px;
+}
+form .form-content .input-boxes{
+    margin-top: 30px;
+}
+form .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin:0 10px 0;
+    position: relative;
+}
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+    border-color:rgb(52, 104, 214) ;
+}
+.form-content .input-box i{
+    position: absolute;
+    color:rgb(52, 104, 214);
+    font-size: 17px;
+}
+form .form-content .text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+form .form-content .text a{
+    text-decoration: none;
+}
+form .form-content .text a:hover{
+    text-decoration: underline;
+}
+
+form .form-content .button{
+    color: #fff;
+    margin-top: 40px;
+}
+form .form-content .button input{
+    color: #fff;
+    background: rgb(52, 104, 214);
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+form .form-content .button input:hover{
+    background: #5b13b9;
+}
+form .form-content label{
+    color:#5b13b9;
+    cursor: pointer;
+}
+form .form-content label:hover{
+    text-decoration: underline;
+}
+ .form-content .button a{
+    text-decoration: none;
+}
